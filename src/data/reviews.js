@@ -62,7 +62,7 @@ export const reviews = [
 ]
 
 export const reviewStats = [
-  { label: "นักเดินทางที่พึงพอใจ", value: "12,500", suffix: "+" },
+  { label: "นักเดินทางที่พึงพอใจ", value: "12500", suffix: "+" },
   { label: "จุดหมายปลายทาง", value: "85", suffix: "+" },
   { label: "คะแนนเฉลี่ย", value: "4.9", suffix: "/5" },
   { label: "ปีแห่งความเป็นเลิศ", value: "8", suffix: "+" },
