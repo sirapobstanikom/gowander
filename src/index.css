@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme {
+  --color-navy: #02304a;
+  --color-navy-light: #034a6e;
+  --color-navy-dark: #011e30;
+  --color-brand-red: #d5282a;
+  --color-brand-red-dark: #b01f21;
+  --color-gold: #fbc14d;
+  --color-gold-light: #fcd97a;
+  --color-cream: #faf8f5;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Noto Sans Thai", system-ui, sans-serif;
+  --shadow-soft: 0 4px 24px -4px rgb(2 48 74 / 0.12);
+  --shadow-card: 0 8px 40px -8px rgb(2 48 74 / 0.18);
+  --shadow-elevated: 0 20px 60px -15px rgb(2 48 74 / 0.25);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-navy antialiased bg-cream;
+  }
+
+  ::selection {
+    @apply bg-gold/40 text-navy;
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold via-gold-light to-gold bg-clip-text text-transparent;
+  }
+
+  .bg-gradient-brand {
+    @apply bg-gradient-to-br from-navy via-navy-light to-navy-dark;
+  }
+
+  .bg-gradient-hero {
+    background: linear-gradient(
+      135deg,
+      rgb(2 48 74 / 0.92) 0%,
+      rgb(2 48 74 / 0.75) 50%,
+      rgb(1 30 48 / 0.85) 100%
+    );
+  }
+
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-navy/80 backdrop-blur-lg border border-white/10;
+  }
+}
