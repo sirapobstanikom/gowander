@@ -5,6 +5,7 @@ export default function HeroBackground({
   fallback,
   variant = "page",
   fit = "cover",
+  objectPosition = "object-center",
   alt = "",
 }) {
   const [currentSrc, setCurrentSrc] = useState(src)
@@ -34,8 +35,8 @@ export default function HeroBackground({
         decoding="async"
         className={
           fit === "contain"
-            ? "absolute inset-0 h-full w-full object-contain object-center"
-            : "absolute inset-0 h-full w-full object-cover object-center"
+            ? `absolute inset-0 h-full w-full object-contain ${objectPosition}`
+            : `absolute inset-0 h-full w-full object-cover ${objectPosition}`
         }
       />
       {!isHome && (

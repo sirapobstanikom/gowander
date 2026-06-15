@@ -37,6 +37,7 @@ export default function Home() {
             src={pageBackgrounds.home}
             fallback={pageBackgroundFallbacks.home}
             variant="home"
+            objectPosition="object-[41%_center] md:object-[34%_center]"
             alt="ทิวทัศน์การเดินทาง"
           />
         </div>

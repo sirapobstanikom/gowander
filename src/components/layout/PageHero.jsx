@@ -9,6 +9,7 @@ export default function PageHero({
   eyebrow,
   imageKey,
   imageFit = "cover",
+  imagePosition = "object-center",
   tall = false,
 }) {
   const fallback = imageKey ? pageBackgroundFallbacks[imageKey] : undefined
@@ -24,6 +25,7 @@ export default function PageHero({
         fallback={fallback}
         variant="page"
         fit={imageFit}
+        objectPosition={imagePosition}
         alt={title}
       />
 

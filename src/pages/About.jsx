@@ -63,6 +63,7 @@ export default function About() {
         subtitle="ผสมผสานความสะดวกของการเดินทาง เข้ากับการสร้างประสบการณ์ที่แตกต่างและน่าจดจำ"
         image={pageBackgrounds.about}
         imageKey="about"
+        imagePosition="object-[15%_center] md:object-center"
         tall
       />
 
