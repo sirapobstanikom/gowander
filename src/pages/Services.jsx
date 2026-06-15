@@ -5,6 +5,7 @@ import ServiceCard from "../components/ui/ServiceCard"
 import ScrollReveal from "../components/ui/ScrollReveal"
 import Button from "../components/ui/Button"
 import { services } from "../data/services"
+import { pageBackgrounds } from "../data/backgrounds"
 
 const process = [
   { step: "01", title: "บอกความฝันของคุณ", desc: "แชร์วิสัยทัศน์ ความชอบ และสไตล์การเดินทางกับผู้เชี่ยวชาญของเรา" },
@@ -20,7 +21,8 @@ export default function Services() {
         eyebrow="บริการของเรา"
         title="ทุกสิ่งที่คุณต้องการสำหรับทริปที่สมบูรณ์แบบ"
         subtitle="บริการท่องเที่ยวครบวงจรที่ออกแบบด้วยความหรูหรา ความสะดวก และการปรับแต่งเป็นหัวใจ"
-        image="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1920&q=80"
+        image={pageBackgrounds.services}
+        imageKey="services"
       />
 
       <section className="py-20 lg:py-28 bg-cream">

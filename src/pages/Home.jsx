@@ -14,6 +14,8 @@ import StatCounter from "../components/ui/StatCounter"
 import { destinations } from "../data/destinations"
 import { services } from "../data/services"
 import { reviews } from "../data/reviews"
+import { pageBackgrounds, pageBackgroundFallbacks } from "../data/backgrounds"
+import HeroBackground from "../components/ui/HeroBackground"
 
 const homeServices = services.slice(0, 4)
 
@@ -29,15 +31,14 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-neutral-900">
         <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1469854523086-cc02afe5c88f?w=1920&q=80"
-            alt="ทิวทัศน์การเดินทางที่สวยงาม"
-            className="w-full h-full object-cover scale-105"
+          <HeroBackground
+            src={pageBackgrounds.home}
+            fallback={pageBackgroundFallbacks.home}
+            variant="home"
+            alt="ทิวทัศน์การเดินทาง"
           />
-          <div className="absolute inset-0 bg-gradient-hero" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(251,193,77,0.15)_0%,_transparent_50%)]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20 text-center">
@@ -45,7 +46,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-gold text-sm font-medium mb-6"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-gold text-sm font-medium mb-6 drop-shadow-md"
           >
             <Sparkles size={16} />
             ท่องเที่ยวและไลฟ์สไตล์ระดับพรีเมียม
@@ -55,7 +56,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3, duration: 0.8 }}
-            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.15] max-w-4xl mx-auto"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-white leading-[1.15] max-w-4xl mx-auto drop-shadow-lg"
           >
             <span className="text-gradient-gold italic">Flight Found Fast.</span>
             <br />
@@ -66,7 +67,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="mt-6 text-lg sm:text-xl text-white/75 max-w-2xl mx-auto leading-relaxed"
+            className="mt-6 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed drop-shadow-md"
           >
             บริการจองตั๋วเครื่องบิน เช่ารถ และออกแบบประสบการณ์การเดินทาง
             <br className="hidden sm:block" />

@@ -5,6 +5,7 @@ import PageHero from "../components/layout/PageHero"
 import ScrollReveal from "../components/ui/ScrollReveal"
 import Button from "../components/ui/Button"
 import { contact } from "../data/contact"
+import { pageBackgrounds } from "../data/backgrounds"
 
 export default function Contact() {
   const [form, setForm] = useState({
@@ -30,7 +31,8 @@ export default function Contact() {
         eyebrow="Contact"
         title="มาวางแผนการผจญภัยครั้งต่อไปกัน"
         subtitle="ไม่ว่าคุณจะมีคำถามหรือพร้อมจอง — ทีม Reservations Office พร้อมช่วยเหลือ"
-        image="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80"
+        image={pageBackgrounds.contact}
+        imageKey="contact"
       />
 
       <section className="py-20 lg:py-28 bg-cream">

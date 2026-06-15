@@ -8,6 +8,7 @@ import ScrollReveal from "../components/ui/ScrollReveal"
 import StarRating from "../components/ui/StarRating"
 import Button from "../components/ui/Button"
 import { reviews, reviewStats } from "../data/reviews"
+import { pageBackgrounds } from "../data/backgrounds"
 
 const ratingBreakdown = [
   { stars: 5, percent: 92 },
@@ -24,7 +25,8 @@ export default function Reviews() {
         eyebrow="เสียงจากลูกค้า"
         title="เรื่องราวจากนักเดินทางของเรา"
         subtitle="ประสบการณ์จริง อารมณ์จริง — ค้นพบว่าทำไมหลายพันคนจึงไว้วางใจ Gowander กับการเดินทางที่สำคัญที่สุด"
-        image="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80"
+        image={pageBackgrounds.reviews}
+        imageKey="reviews"
       />
 
       <section className="py-16 bg-white border-b border-navy/5">

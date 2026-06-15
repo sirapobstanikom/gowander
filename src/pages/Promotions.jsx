@@ -7,6 +7,7 @@ import ScrollReveal from "../components/ui/ScrollReveal"
 import CountdownTimer from "../components/ui/CountdownTimer"
 import Button from "../components/ui/Button"
 import { promotions, seasonalCampaigns } from "../data/promotions"
+import { pageBackgrounds } from "../data/backgrounds"
 
 const featured = promotions.filter((p) => p.featured)
 const regular = promotions.filter((p) => !p.featured)
@@ -20,7 +21,8 @@ export default function Promotions() {
         eyebrow="ดีลพิเศษ"
         title="โปรโมชันและแพ็กเกจท่องเที่ยว"
         subtitle="ดีลคัดสรรสำหรับพักผ่อนสุดหรู ทริปตามฤดูกาล และการผจญภัยครั้งหนึ่งในชีวิต"
-        image="https://images.unsplash.com/photo-1501785888041-af3ef285b470?w=1920&q=80"
+        image={pageBackgrounds.promotions}
+        imageKey="promotions"
       />
 
       <section className="py-12 bg-brand-red relative overflow-hidden">

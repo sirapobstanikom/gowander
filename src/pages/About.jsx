@@ -4,6 +4,7 @@ import SectionTitle from "../components/ui/SectionTitle"
 import ScrollReveal from "../components/ui/ScrollReveal"
 import Button from "../components/ui/Button"
 import { milestones } from "../data/milestones"
+import { pageBackgrounds } from "../data/backgrounds"
 
 const values = [
   {
@@ -60,7 +61,9 @@ export default function About() {
         eyebrow="About Us"
         title="ผู้ให้บริการด้านการเดินทางครบวงจร"
         subtitle="ผสมผสานความสะดวกของการเดินทาง เข้ากับการสร้างประสบการณ์ที่แตกต่างและน่าจดจำ"
-        image="https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1920&q=80"
+        image={pageBackgrounds.about}
+        imageKey="about"
+        tall
       />
 
       <section className="py-20 lg:py-28 bg-cream">
@@ -97,7 +100,7 @@ export default function About() {
             <ScrollReveal delay={0.2}>
               <div className="relative rounded-3xl overflow-hidden shadow-elevated aspect-[4/5]">
                 <img
-                  src="https://images.unsplash.com/photo-1506928037257-9c09efac1a2d?w=800&q=80"
+                  src="https://onrojzovngqbtxdpxcaq.supabase.co/storage/v1/object/public/pic/Beyond%20Experience%20Trip.png"
                   alt="นักเดินทางมองทิวทัศน์"
                   className="w-full h-full object-cover"
                 />
